@@ -63,8 +63,8 @@ def crop_videos_to_4_3(input_dir, output_dir):
     print(f"Resizing completed. Videos saved to: {output_dir}")
 
 if __name__ == "__main__":
-    video_directory = os.path.expanduser("~/Desktop/shareid/target")
-    output_directory = os.path.expanduser("~/Desktop/shareid/resized")
+    video_directory = os.path.expanduser("../../target")
+    output_directory = os.path.expanduser("../../resized")
     if os.path.exists(video_directory):
         crop_videos_to_4_3(video_directory, output_directory)
     else:
