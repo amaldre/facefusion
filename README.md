@@ -1,61 +1,31 @@
-FaceFusion
-==========
+# FaceFusion
 
-> Industry leading face manipulation platform.
+This repository a fork of [FaceFusion](https://github.com/facefusion/facefusion).
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/facefusion/facefusion/ci.yml.svg?branch=master)](https://github.com/facefusion/facefusion/actions?query=workflow:ci)
-[![Coverage Status](https://img.shields.io/coveralls/facefusion/facefusion.svg)](https://coveralls.io/r/facefusion/facefusion)
-![License](https://img.shields.io/badge/license-OpenRAIL--AS-green)
+> 🔗 Original project: [https://github.com/facefusion/facefusion](https://github.com/facefusion/facefusion)
 
+The idea of this fork is to be able to create jobs and face swaps based on only videos from a specified folder
 
-Preview
--------
+---
 
-![Preview](https://raw.githubusercontent.com/facefusion/facefusion/master/.github/preview.png?sanitize=true)
+# Changes applied
 
+## Video size
 
-Installation
-------------
+Created a file to resize the video to a format accepted by FaceFusion : `resize_video.py`
 
-Be aware, the [installation](https://docs.facefusion.io/installation) needs technical skills and is not recommended for beginners. In case you are not comfortable using a terminal, our [Windows Installer](http://windows-installer.facefusion.io) and [macOS Installer](http://macos-installer.facefusion.io) get you started.
+---
 
+## Frame extraction
 
-Usage
------
+Created a file to extract the first frame for a video : `extract_frames.py`
 
-Run the command:
+---
 
-```
-python facefusion.py [commands] [options]
+## Job pipeline
 
-options:
-  -h, --help                                      show this help message and exit
-  -v, --version                                   show program's version number and exit
+Created a file to perform a job pipeline : `job_creation.py`
 
-commands:
-    run                                           run the program
-    headless-run                                  run the program in headless mode
-    batch-run                                     run the program in batch mode
-    force-download                                force automate downloads and exit
-    benchmark                                     benchmark the program
-    job-list                                      list jobs by status
-    job-create                                    create a drafted job
-    job-submit                                    submit a drafted job to become a queued job
-    job-submit-all                                submit all drafted jobs to become a queued jobs
-    job-delete                                    delete a drafted, queued, failed or completed job
-    job-delete-all                                delete all drafted, queued, failed and completed jobs
-    job-add-step                                  add a step to a drafted job
-    job-remix-step                                remix a previous step from a drafted job
-    job-insert-step                               insert a step to a drafted job
-    job-remove-step                               remove a step from a drafted job
-    job-run                                       run a queued job
-    job-run-all                                   run all queued jobs
-    job-retry                                     retry a failed job
-    job-retry-all                                 retry all failed jobs
-```
-
-
-Documentation
--------------
-
-Read the [documentation](https://docs.facefusion.io) for a deep dive.
+- Perform a swap with a random first frame for a video
+- Apply face and frame enhancement
+- Do this for all files from the folder
