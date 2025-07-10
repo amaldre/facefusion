@@ -40,8 +40,8 @@ def extract_first_frames(input_dir, output_dir):
     print(f"Frame extraction completed. Frames saved to: {output_dir}")
 
 if __name__ == "__main__":
-    video_directory = os.path.expanduser("~/Desktop/shareid/resized")
-    extract_path = os.path.expanduser("~/Desktop/shareid/extracted_frames")
+    video_directory = os.path.expanduser("../../resized")
+    extract_path = os.path.expanduser("../../extracted_frames")
     
     if os.path.exists(video_directory):
         extract_first_frames(video_directory, extract_path)
