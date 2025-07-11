@@ -44,7 +44,7 @@ The idea of this fork is to be able to create jobs and face swaps based on only 
 
 ## Prepare video folder
 
-Put the video folder under the name `target`, and change the path to all folders to where you want your folder to be in [here](job_creation.py)
+Put the video folder under the name `target`, and change the path to all folders to where you want your folder to be in [job_creation.py](job_creation.py)
 
 ## Launch job creation
 
