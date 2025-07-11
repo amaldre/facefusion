@@ -8,6 +8,50 @@ The idea of this fork is to be able to create jobs and face swaps based on only 
 
 ---
 
+# HOW TO RUN IT
+
+## Create the conda env
+
+`conda create --name facefusion python=3.12 pip=25.0`
+
+`conda activate facefusion`
+
+## Install accelerator
+
+### LINUX
+
+`conda install nvidia/label/cuda-12.9.1::cuda-runtime nvidia/label/cudnn-9.10.0::cudnn`
+
+### WINDOWS
+
+`conda install nvidia/label/cuda-12.9.1::cuda-runtime nvidia/label/cudnn-9.10.0::cudnn`
+
+## Clone the repo
+
+`git clone git@github.com:amaldre/facefusion.git`
+
+`cd facefusion`
+
+## Install application
+
+`python install.py --onnxruntime cuda`
+
+## Reload the env
+
+`conda deactivate`
+
+`conda activate facefusion`
+
+## Prepare video folder
+
+Put the video folder under the name `target`, and change the path to all folders to where you want your folder to be in [here](job_creation.py)
+
+## Launch job creation
+
+`python job_creation.py`
+
+---
+
 # Changes applied
 
 ## Video size
