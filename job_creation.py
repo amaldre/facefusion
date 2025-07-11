@@ -7,6 +7,9 @@ extracted_path = "../../extracted_frames"
 target_base_path = "../../resized"
 output_base_path = "../../output"
 
+crop_videos_to_4_3(folder_path, target_base_path)
+extract_first_frames(target_base_path, extracted_path)
+
 names = [os.path.splitext(f)[0] for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
 
 for name in names:
