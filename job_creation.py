@@ -1,6 +1,8 @@
 import subprocess
 import os
 import random
+from extract_frames import extract_first_frames
+from resize_video import crop_videos_to_4_3
 
 folder_path = "../../target"
 extracted_path = "../../extracted_frames"
